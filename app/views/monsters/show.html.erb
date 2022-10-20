@@ -1,1 +1,44 @@
-<%# Update me %><%= @monster.inspect %>
+<%@monster.inspect %>
+
+  <h1>
+    <%= @monster.name%>
+  </h1>
+  <p>
+    <%= @monster.description %>
+  </p>
+
+  <button type="button" class="btn btn-outline-danger">Delete</button>
+
+  <div class="button">
+    <% link_to @monster.name, "" %>
+  </div>
+
+
+  <h1>Lista de tweets</h1>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <b> Description </b>
+      </div>
+      <div class="col-sm">
+        <b> Tweets </b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <%= @monster.description %>
+      </div>
+      <div class="col-sm">
+        <% @monster.tweets.each do |tweet| %>
+          <div class="row">
+            <td>
+              <%= tweet.content %>
+            </td>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  <footer>Copyright © 2022</footer>
