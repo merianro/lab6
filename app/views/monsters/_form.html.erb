@@ -1,0 +1,7 @@
+<%= simple_form_for @monster do |f| %>
+  <%= f.input :name, label: 'Name'%>
+  <%= f.input :description, label: 'Description' %>
+  <%= f.input :phone, label: 'Phone' %>
+  <%= f.input :birthdate, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year - 14 %>
+  <%= f.button :submit, class: "btn btn-outline-primary" %>
+<% end %>

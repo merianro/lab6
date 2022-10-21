@@ -1,4 +1,3 @@
-<%@monster.inspect %>
 
   <h1>
     <%= @monster.name%>
@@ -8,6 +7,9 @@
   </p>
 
   <button type="button" class="btn btn-outline-danger">Delete</button>
+  <%= link_to "Edit", edit_monster_path, class: "btn btn-outline-primary" %>
+
+
 
   <div class="button">
     <% link_to @monster.name, "" %>

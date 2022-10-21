@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :monsters, only: [:index, :show]  
-  resources :tweets, expect: [:edit, :update]  
+  resources :monsters 
+  resources :tweets 
 
   root "tweets#index"
 end
